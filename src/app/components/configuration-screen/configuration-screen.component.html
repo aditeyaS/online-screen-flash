@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="heading-container">
+        <h3>Online Screen Flash</h3>
+    </div>
+    <div class="color-container">
+        <div class="color-container-item left">
+            <div class="color-container-item-content">
+                <input
+                    [(colorPicker)]="selectedColor"
+                    [style.background]="selectedColor"
+                    [cpOutputFormat]="'hex'"
+                    [cpPosition]="'bottom'"
+                    [cpAlphaChannel]="'disabled'"
+                    class="color-container-item-content-view"
+                    style="caret-color: transparent; cursor: pointer;"
+                />
+                <div class="color-container-item-content-label">
+                    <input type="radio" id="solid" name="choice" value="solid" (click)="solidColors()" checked>
+                    <label for="solid" class="color-container-item-content-label-text">Solid</label>
+                </div>
+            </div>
+        </div>
+        <div class="color-container-item right">
+            <div class="color-container-item-content">
+                <div class="color-container-item-content-view" 
+                style="background-image: url('../../../assets/mixed_color.jpg'); background-repeat: no-repeat; background-size: contain;"
+                ></div>
+                <div class="color-container-item-content-label">
+                    <input type="radio" id="mixed" name="choice" value="mixed" (click)="mixedColors()">
+                    <label for="mixed" class="color-container-item-content-label-text">Mixed</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="frequency-container">
+        <div class="frequency-container-content">
+            <label for="frequency">Choose frequency:</label>
+            <select name="frequency" id="frequency" [(ngModel)]="frequency">
+                <option value="0">None</option>
+                <option value="100">100 ms</option>
+                <option value="200">200 ms</option>
+                <option value="300">300 ms</option>
+                <option value="400">400 ms</option>
+                <option value="500">500 ms</option>
+                <option value="600">600 ms</option>
+                <option value="700">700 ms</option>
+                <option value="800">800 ms</option>
+                <option value="900">900 ms</option>
+                <option value="1000">1 s</option>
+            </select>
+        </div>
+    </div>
+    <div class="submit-container">
+        <button class="submit-container-button" (click)="startFlash()">Flash</button>
+    </div>
+    <div class="footer-container">
+        <a target="_blank" href="https://aditeyas.github.io/">&copy; Aditeya Srivastava</a>
+    </div>
+</div>
+<app-flash-screen *ngIf="showFlasher;"
+    [isSolid]="isSolid"
+    [color]="selectedColor"
+    [frequency]="frequency"
+    (close)="closeFlash($event)"
+></app-flash-screen>

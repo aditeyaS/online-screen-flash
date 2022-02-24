@@ -1,0 +1,82 @@
+.container {
+    background-color: darkgray;
+    height: 100%;
+}
+.heading-container {
+    display: flex;
+    justify-content: center;
+}
+.color-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    &-item {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &-label {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &-text {
+                    margin-top: 10px;
+                }
+            }
+            &-view {
+                height: 25px;
+                width: 24px;
+                background-color: red;
+                border-radius: 50%;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .left {
+        justify-content: end;
+        margin-right: 30px;
+    }
+    .right {
+        justify-content: start;
+        margin-left: 30px;
+    }
+}
+.frequency-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    &-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.submit-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    &-button {
+        padding: 8px 15px;
+        text-transform: uppercase;
+        background-color: dodgerblue;
+        border-radius: 5px;
+        color: white;
+    }
+}
+.footer-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+ng-template {
+    height: 100%;
+    width: 100%;
+}
