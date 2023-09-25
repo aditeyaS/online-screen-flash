@@ -14,11 +14,11 @@ Usage:
 ![CSS](https://img.shields.io/badge/-CSS-1572B6?style=flat-square&logo=css3&logoColor=ffffff)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 
-### Build
+### ⚙ Build
 
 Run `ng build --output-path docs --base-href /online-screen-flash/` to build the project. The build artifacts will be stored in the `docs` directory.
 After build is complete replace the asset ury by `./assets/mixed_color.jpg`
 
-### Deployed
+### 🟢 Deployed
 
 [Link to the app](https://aditeyas.github.io/online-screen-flash/)
